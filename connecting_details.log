@@ -1,12 +1,12 @@
-t=2026-02-21T19:19:53+0800 lvl=info msg="no configuration paths supplied"
-t=2026-02-21T19:19:53+0800 lvl=info msg="using configuration at default config path" path=/home/new-api/.config/ngrok/ngrok.yml
-t=2026-02-21T19:19:53+0800 lvl=info msg="open config file" path=/home/new-api/.config/ngrok/ngrok.yml err=nil
-t=2026-02-21T19:19:53+0800 lvl=info msg="FIPS 140 mode" enabled=false
-t=2026-02-21T19:19:53+0800 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
-t=2026-02-21T19:19:53+0800 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4042 allow_hosts=[]
-t=2026-02-21T19:19:53+0800 lvl=info msg="client session established" obj=tunnels.session
-t=2026-02-21T19:19:53+0800 lvl=info msg="tunnel session started" obj=tunnels.session
-t=2026-02-21T19:19:54+0800 lvl=info msg="started tunnel" obj=tunnels name=vm-station-new-api-2009 addr=http://localhost:2009 url=https://unrepressible-traumatically-bertha.ngrok-free.dev
-t=2026-02-21T19:19:54+0800 lvl=info msg="update available" obj=updater
-t=2026-02-21T19:19:57+0800 lvl=info msg=start pg=/api/tunnels id=768b55dcfeb6e1fd
-t=2026-02-21T19:19:57+0800 lvl=info msg=end pg=/api/tunnels id=768b55dcfeb6e1fd status=200 dur=473.463µs
+t=2026-02-21T19:26:28+0800 lvl=info msg="no configuration paths supplied"
+t=2026-02-21T19:26:28+0800 lvl=info msg="using configuration at default config path" path=/home/new-api/.config/ngrok/ngrok.yml
+t=2026-02-21T19:26:28+0800 lvl=info msg="open config file" path=/home/new-api/.config/ngrok/ngrok.yml err=nil
+t=2026-02-21T19:26:28+0800 lvl=info msg="FIPS 140 mode" enabled=false
+t=2026-02-21T19:26:28+0800 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
+t=2026-02-21T19:26:28+0800 lvl=info msg="starting web service" obj=web addr=127.0.0.1:4042 allow_hosts=[]
+t=2026-02-21T19:26:28+0800 lvl=info msg="client session established" obj=tunnels.session
+t=2026-02-21T19:26:28+0800 lvl=info msg="tunnel session started" obj=tunnels.session
+t=2026-02-21T19:26:28+0800 lvl=info msg="started tunnel" obj=tunnels name=vm-station-new-api-2009 addr=http://localhost:2009 url=https://unrepressible-traumatically-bertha.ngrok-free.dev
+t=2026-02-21T19:26:29+0800 lvl=info msg="update available" obj=updater
+t=2026-02-21T19:26:32+0800 lvl=info msg=start pg=/api/tunnels id=311f955ee3eb6c77
+t=2026-02-21T19:26:32+0800 lvl=info msg=end pg=/api/tunnels id=311f955ee3eb6c77 status=200 dur=238.157µs
