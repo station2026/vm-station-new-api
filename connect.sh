@@ -17,6 +17,7 @@ set -euo pipefail
 NGROK_PORT="2009"
 NGROK_API_HOST="127.0.0.1"
 NGROK_API_PORT="4042"
+NGROK_ENDPOINT_NAME="vm-station-new-api-${NGROK_PORT}"
 NGROK_PID_FILE=".ngrok_http_${NGROK_PORT}.pid"
 
 stop_previous() {
@@ -24,7 +25,7 @@ stop_previous() {
         local old_pid
         old_pid="$(cat "$NGROK_PID_FILE" 2>/dev/null || true)"
         if [[ -n "${old_pid}" ]] && kill -0 "$old_pid" 2>/dev/null; then
-            if ps -p "$old_pid" -o cmd= 2>/dev/null | rg -q "ngrok http ${NGROK_PORT}\\b"; then
+            if ps -p "$old_pid" -o cmd= 2>/dev/null | grep -qE "ngrok http ${NGROK_PORT}\\b"; then
                 echo "INFO: Stopping previous ngrok (pid=${old_pid}) started by this script..."
                 kill "$old_pid" 2>/dev/null || true
                 sleep 1
@@ -38,7 +39,7 @@ stop_previous
 
 # Start the new ngrok tunnel in the background
 echo "INFO: Starting new ngrok tunnel for HTTP (port 2009)..."
-ngrok http "$NGROK_PORT" --log=stdout --log-format=logfmt > connecting_details.log &
+ngrok http "$NGROK_PORT" --name "$NGROK_ENDPOINT_NAME" --log=stdout --log-format=logfmt > connecting_details.log &
 echo $! > "$NGROK_PID_FILE"
 
 # Give ngrok a moment to establish the connection and start its API
